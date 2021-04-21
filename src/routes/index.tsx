@@ -8,8 +8,9 @@ import {Home, Catalog} from '../pages'
 const Routes: React.FC = () => {
     return(
       <Stack.Navigator>
-          <Stack.Screen name="Home" component={Home} />
+         
           <Stack.Screen name="Catalog" component={Catalog} />
+          <Stack.Screen name="Home" component={Home} />
       </Stack.Navigator>
     )
 }

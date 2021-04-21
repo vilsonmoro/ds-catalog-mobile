@@ -9,7 +9,7 @@ const colors = {
     black: "#000000",
     primary: "#407bee",
     secondary: "#33569b",
-    red: "#df5753",
+    borderGray: "#9e9e9e",
 }
 
 const text = StyleSheet.create({
@@ -131,6 +131,34 @@ const theme = StyleSheet.create({
     priceContainer:{
       flexDirection: "row",
       marginTop: 10,
+    },
+
+    //search input
+    inputContainer:{
+        width: "100%",
+        height: 60,
+        backgroundColor: colors.white,
+        borderRadius: 10,
+        shadowColor: colors.black,
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        alignItems: "center",
+        marginVertical: 12.5,
+        paddingVertical: 10,       
+    },
+    searchInput:{
+      width: "90%",
+      height: 40,
+      borderBottomColor: colors.borderGray,
+    },
+    productImage:{
+       width: 140,
+       height: 140,
+       margin: 16,
     },
 });
 
