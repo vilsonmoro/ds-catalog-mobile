@@ -24,7 +24,7 @@ const Home: React.FC = ( ) => {
                     >
                      <Text style={text.primaryText}>INICIE AGORA A SUA BUSCA</Text>
                      <View style={theme.arrowContainer}>
-                         <Image source={arrow} />
+                         <Image source={arrow} style={{width:7, height: 14,}} />
                      </View>
                  </TouchableOpacity>
             </View>         

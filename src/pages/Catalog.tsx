@@ -28,17 +28,20 @@ const Catalog: React.FC = () => {
         : products;
 
     return (
-        <ScrollView contentContainerStyle={theme.scrollContainer}>
-            <SearchInput
-                placeHolder="Nome do produto"
-                search={search}
-                setSearch={setSearch} />
-            {
-                loading ? (<ActivityIndicator size='large' />)
-                    : (data.map(product => (
-                <ProductCard {...product} key={product.id} />
-            )))}
-        </ScrollView>
+        <View style={theme.container}>
+            <ScrollView contentContainerStyle={theme.scrollContainer}>
+                <SearchInput
+                    placeHolder="Nome do produto"
+                    search={search}
+                    setSearch={setSearch} />
+                {
+                    loading ? (<ActivityIndicator size='large' />)
+                        : (data.map(product => (
+                            <ProductCard {...product} key={product.id} />
+                        )))}
+            </ScrollView>
+        </View>
+
 
     )
 };
