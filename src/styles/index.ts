@@ -160,6 +160,88 @@ const theme = StyleSheet.create({
        height: 140,
        margin: 16,
     },
+
+    //details
+    detailsContainer:{
+       backgroundColor: colors.white,
+       padding: 20,
+    },
+    detailsCard:{
+        width: '100%',
+        height: '100%',
+        backgroundColor: colors.white,
+        borderRadius: 10,
+        shadowColor: colors.black,
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        justifyContent: "space-around",
+        padding: 20,
+    },
+
+    productImageContainer:{
+        width: "100%",
+        borderRadius: 20,
+        borderColor: "#E1E1E1",
+        borderWidth: 1,        
+        paddingHorizontal: 30,
+        paddingVertical: 15,
+        alignItems: 'center',
+    },
+
+    detailName:{
+       color: "#263238",
+       fontSize: 30,
+       fontWeight: "bold",
+       marginHorizontal: 20,
+       marginTop: 10,
+    },
+    currency:{
+        color: "#9E9E9E",
+        fontSize: 24,
+        fontWeight: "normal",
+        marginLeft: 20,
+    },
+    priceDetail:{
+        color: "#407BFF",
+        fontSize: 42,
+        fontWeight: "bold",
+        marginLeft: 54, 
+        marginRight: 90,
+    },
+    detailDescription:{
+        color: "#9E9E9E",
+        fontSize: 16,
+        fontWeight: "normal",       
+    },
+    scrollTextContainer:{
+      marginVertical: 20,
+      padding: 10,
+      borderWidth: 1,
+      borderRadius: 10,
+      borderColor: colors.lightGray,
+    },
+    productDetailImage: {
+         width: 269, 
+         height: 269,
+    },
+    gobackcontainer:{
+        width:290,
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginVertical: 10,
+    },
+    gobackText:{
+        fontSize: 18,
+        fontWeight: "bold",
+        textTransform: 'uppercase',
+        color: colors.darkGray,
+        marginLeft: 16,
+    },
+    
 });
 
 export { colors, theme, text }

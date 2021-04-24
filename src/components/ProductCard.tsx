@@ -1,6 +1,8 @@
 import React from "react";
 import { View, Text, ImageSourcePropType, TouchableOpacity, Image } from "react-native";
 import { text, theme } from "../styles";
+import { useNavigation } from '@react-navigation/native';
+
 
 interface ProductProps {
   id: Number;
@@ -10,8 +12,12 @@ interface ProductProps {
 }
 
 const ProductCard: React.FC<ProductProps> = ({ id, name, imgUrl, price }) => {
+  const navigation = useNavigation();
   return (
-    <TouchableOpacity style={theme.productCard}>
+    <TouchableOpacity 
+       style={theme.productCard}
+       onPress={() => navigation.navigate("ProductDetails", {id})}
+       >
       <Image source={{uri: imgUrl}}  style={theme.productImage}/>
       <View style={theme.productDescription}>
         <Text style={text.productName}>{name}</Text>

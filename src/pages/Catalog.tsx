@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ScrollView, View, Text, ActivityIndicator } from "react-native";
 import { ProductCard, SearchInput } from "../components";
-import productImg from "../assets/produto.png";
 import { theme } from "../styles";
 import { api } from "../services";
 
@@ -14,7 +13,7 @@ const Catalog: React.FC = () => {
         setLoading(true);
         const res = await api.get(`/products?page=0&linesPerPage=12&direction=ASC&orderBy=name`);
         setProducts(res.data.content);
-        setLoading(true);
+        setLoading(false);
     }
 
     useEffect(() => {
