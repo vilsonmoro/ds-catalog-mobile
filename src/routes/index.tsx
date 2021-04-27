@@ -6,7 +6,7 @@ import { nav } from '../styles';
 
 const Stack = createStackNavigator();
 
-import {Home, Catalog, ProductDetails} from '../pages'
+import {Home, Catalog, ProductDetails, Login, DashBoard} from '../pages'
 import { colors } from '../styles';
 
 const HeaderText: React.FC = () => <Text style={nav.leftText}>DS Catalog</Text>
@@ -28,6 +28,10 @@ const Routes: React.FC = () => {
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="Catalog" component={Catalog} />
           <Stack.Screen name="ProductDetails" component={ProductDetails} />
+          <Stack.Screen name="Login" component={Login} />
+
+          {/* Dashboard administrativo */}
+          <Stack.Screen name="DashBoard" component={DashBoard} />
       </Stack.Navigator>
     )
 }
