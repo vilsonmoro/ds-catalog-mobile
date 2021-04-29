@@ -1,4 +1,5 @@
 import { StyleSheet, Dimensions } from 'react-native';
+import { color } from 'react-native-reanimated';
 const deviceWidth = Dimensions.get('window').width;
 
 const colors = {
@@ -47,8 +48,8 @@ const text = StyleSheet.create({
         fontWeight: "bold",
         color: colors.primary,
     },
-    logoutText:{
-      color: colors.white,
+    logoutText: {
+        color: colors.white,
     },
 
 });
@@ -265,10 +266,10 @@ const theme = StyleSheet.create({
     },
     passwordGroup: {
         flexDirection: 'row',
-        alignItems:'center',
+        alignItems: 'center',
         marginVertical: 25,
     },
-    textInput:{
+    textInput: {
         width: 290,
         height: 50,
         borderWidth: 1,
@@ -277,14 +278,14 @@ const theme = StyleSheet.create({
         padding: 10,
     },
 
-    toggle:{
+    toggle: {
         margin: -40
     },
-    loginTitle:{
-       fontSize: 30,
-       color: colors.darkGray,
-       textTransform:'uppercase',
-       marginBottom: 50,
+    loginTitle: {
+        fontSize: 30,
+        color: colors.darkGray,
+        textTransform: 'uppercase',
+        marginBottom: 50,
     },
 
 })
@@ -324,7 +325,7 @@ const nav = StyleSheet.create({
         width: 313,
         height: 225,
     },
-    logoutBtn:{
+    logoutBtn: {
         width: 60,
         height: 30,
         borderWidth: 1,
@@ -333,10 +334,40 @@ const nav = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         marginRight: 20,
-
     },
 
 
 })
 
-export { colors, theme, text, nav }
+const tabbar = StyleSheet.create({
+    container: {
+      width: deviceWidth,
+      height: 80,
+      backgroundColor: colors.white,
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-around',
+    },
+
+    pill:{
+      padding: 15,
+      backgroundColor: colors.lightGray,
+      borderRadius: 30,
+    },
+
+    pillActive:{
+       backgroundColor: '#3effff'
+    },
+
+    pillText: {
+       fontWeight: '600',
+       color: colors.mediumGray,
+    },
+
+    pillTextActive:{
+      color: colors.primary,
+    },
+
+})
+
+export { colors, theme, text, nav, tabbar }
