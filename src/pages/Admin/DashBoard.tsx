@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import {View, Text} from 'react-native';
+import { FormProduct } from '..';
 import { TabBar } from '../../components';
-import {theme} from "../../styles";
 
 import Categories from './Categories';
-import Products from './Products';
+import Products from './Products/ListProduct';
 import Users from './Users';
 
 const DashBoard: React.FC = () => {
@@ -12,7 +12,8 @@ const DashBoard: React.FC = () => {
     return(
         <View>
             <TabBar screen={screen} setScreen={setScreen} />
-            {screen == "products" && <Products />}
+            {screen == "products" && <Products setScreen={setScreen} />}
+            {screen == "newProduct" && <FormProduct setScreen={setScreen} /> }
             {screen == "categories" && <Categories />}
             {screen == "users" && <Users />}
         </View>

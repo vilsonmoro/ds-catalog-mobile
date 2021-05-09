@@ -1,5 +1,4 @@
 import { StyleSheet, Dimensions } from 'react-native';
-import { color } from 'react-native-reanimated';
 const deviceWidth = Dimensions.get('window').width;
 
 const colors = {

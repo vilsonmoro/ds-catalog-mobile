@@ -9,16 +9,19 @@ import {
     ScrollViewBase,
     StyleSheet
 } from 'react-native';
-import { SearchInput, ProductCard } from '../../components';
-import { getProducts } from '../../services';
-import { colors } from '../../styles';
+import { SearchInput, ProductCard } from '../../../components';
+import { getProducts } from '../../../services';
+import { colors } from '../../../styles';
 
+interface ProductProps {
+   setScreen: Function; 
+}
 
-const Products: React.FC = () => {
+const Products: React.FC<ProductProps> = (props) => {
     const [search, setSearch] = useState("");
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(false);
-
+    const { setScreen } = props;
     async function fillProducts() {
         setLoading(true);
         const res = await getProducts();
@@ -39,7 +42,11 @@ const Products: React.FC = () => {
 
     return (
         <ScrollView contentContainerStyle={admin.container}>
-           <TouchableOpacity style={admin.addButton}>
+           <TouchableOpacity 
+               style={admin.addButton}
+               onPress={() => setScreen("newProduct")}
+               
+               >
                <Text style={admin.addButtonText}>Adicionar</Text>
            </TouchableOpacity>
            <SearchInput 
@@ -74,7 +81,7 @@ const admin = StyleSheet.create({
      justifyContent:  'center'
    },
 
-   addButtoText:{
+   addButtonText:{
     color: colors.white,
     textTransform: 'uppercase',
     fontWeight: 'bold',

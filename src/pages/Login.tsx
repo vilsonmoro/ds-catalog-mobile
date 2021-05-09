@@ -10,7 +10,11 @@ import { isAuthenticated, login } from '../services/auth';
 const Login: React.FC = () => {
     const navigation = useNavigation();
     const [hidePassword, setHidePassword] = useState(false);
-    const [userInfo, setUserInfo] = useState({ username: "", password: "" })
+    const [userInfo, setUserInfo] = useState(
+        {
+         username: "maria@gmail.com",
+         password: "123456" 
+        })
     const [userFetcData, setUserFetchData] = useState({})
 
     async function handleLogin(){
@@ -67,7 +71,7 @@ const Login: React.FC = () => {
                     activeOpacity={0.8}
                     onPress={() => handleLogin()}
                 >
-                   <View style={theme.buttonTextContainer}>
+                   <View>
                        <Text style={text.primaryText}>Fazer Login</Text>
                    </View>
                    <View style={theme.arrowContainer}>
